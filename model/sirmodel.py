@@ -13,15 +13,15 @@ class SIRModel():
     beta = taux de contact (vitesse de la propagation de la maladie)
     gamma = moyenne de temps de guérison (vitesse de guérison de la maladie)
     """
-    def __init__(self, beta_init=0.1, gamma_init=0.3):
+    def __init__(self, beta_init=0.1, gamma_init=0.3, R0=0, I0=3, N=67000000):
         self.beta_0 = beta_init
         self.gamma_0 = gamma_init
         self.beta_ = None
         self.gamma_ = None
         # Total population, N.
-        self.N = 67000000
+        self.N = N
         # Initial number of infected and recovered individuals, I0 and R0.
-        self.I0, self.R0 = 3, 0
+        self.I0, self.R0 = I0, R0
         # Everyone else, S0, is susceptible to infection initially.
         self.S0 = self.N - self.I0 - self.R0
 
