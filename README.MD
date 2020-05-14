@@ -16,6 +16,14 @@ Créer un environnement virtuel python, installer les dépendances de requiremen
 
 `jupyter-notebook`
 
-Notebook d'exploration : exploration_chiffres_cles.ipynb
+#### Notebook d'exploration : 
 
-Notebook de fitting : TestSIR_chiffres_cles.ipynb
+exploration_chiffres_cles.ipynb
+
+#### Notebook de fitting : 
+
+TestSIR_chiffres_cles.ipynb
+
+#### Bonus
+
+Des tests supplémentaires ont été réalisés avec le modèle SEIR dans le notebook SEIR_in_progress.ipynb
