@@ -6,12 +6,13 @@ from scipy.integrate import odeint
 
 class SEIRModel():
     """
-    Cette classe représente une modélisation SIR épidémiologique.
-    Les paramètres du modèles sont beta et gamma dont les valeurs initiales sont données à
+    Cette classe représente une modélisation SEIR épidémiologique.
+    Les paramètres du modèles sont beta, gamma et delta dont les valeurs initiales sont données à
     l'instanciation de la classe.
     
-    beta = taux de contact (vitesse de la propagation de la maladie)
-    gamma = moyenne de temps de guérison (vitesse de guérison de la maladie)
+    beta = taux de contact en personnes / jours (vitesse de la propagation de la maladie)
+    gamma = moyenne de temps de guérison en 1 / jours (vitesse de guérison de la maladie)
+    delta = temps d'incubation (jours après lequel un Exposed devient Infected)
     """
     def __init__(self, beta_init=0.1, gamma_init=0.3, delta_init=14, R0=0, I0=1, N=67000000, E0=0):
         self.beta_0 = beta_init
